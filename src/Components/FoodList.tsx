@@ -34,6 +34,7 @@ export default class FoodList extends React.Component<IProps,IState>{
       );
       console.log(this.state.topics) //returns [];
     }
+    
 
     public render() {
           console.log(this.state.topics)
@@ -51,7 +52,6 @@ export default class FoodList extends React.Component<IProps,IState>{
                 <TwitterShareButton url = "https://feedmefrontend.azurewebsites.net/FoodList/"><TwitterIcon/></TwitterShareButton>
             </header>
             <ul>
-              
               <table>
                 {this.state.topics.map((topic: any) =>(
                   <tr>

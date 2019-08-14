@@ -9,8 +9,6 @@ import * as React from 'react';
 import './Details.css';
 
 
-
-
 interface IState{
     address: string,
     date: string
