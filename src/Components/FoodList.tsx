@@ -3,6 +3,9 @@ import "./FoodList.css";
 import Rating from '@material-ui/lab/Rating';
 import { Typography, Box } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
+import {FacebookShareButton, TwitterShareButton, PinterestShareButton} from 'react-share';
+import {FacebookIcon, TwitterIcon, PinterestIcon} from 'react-share';
+// import {FacebookShareCount, PinterestShareCount} from 'react-share';
 
 interface IState{
   topics: any
@@ -39,6 +42,13 @@ export default class FoodList extends React.Component<IProps,IState>{
             <div>
             <header className="App-header">
                 <h1 className="App-title">FeedMe <NavLink to = '/'>Details</NavLink></h1>
+                <div>
+                <FacebookShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/"><FacebookIcon/></FacebookShareButton>
+                </div>
+                <div>
+                <PinterestShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/" media = "https://feedmeimagestorage.blob.core.windows.net/images/a8620bc7-a9fd-4822-be6a-d9dd891f8af0.jpg"><PinterestIcon/></PinterestShareButton>
+                </div>
+                <TwitterShareButton url = "https://feedmefrontend.azurewebsites.net/FoodList/"><TwitterIcon/></TwitterShareButton>
             </header>
             <ul>
               
@@ -66,7 +76,7 @@ export default class FoodList extends React.Component<IProps,IState>{
                   ))}
               </table>
             </ul>
-            </div>
+          </div>
       )
   }
 }
