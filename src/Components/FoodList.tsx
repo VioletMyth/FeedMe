@@ -21,7 +21,7 @@ export default class FoodList extends React.Component<IProps,IState>{
 
 
     componentDidMount() {
-      fetch('https://localhost:5001/api/Details').then((res)=>res.json().then((data)=>{
+      fetch('https://feedmeapidevops.azurewebsites.net/api/Details').then((res)=>res.json().then((data)=>{
         const output:any[] = []
         data.forEach((food: any)=>{
           output.push(food)

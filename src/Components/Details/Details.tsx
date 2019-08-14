@@ -186,7 +186,7 @@ export default class Details extends React.Component<any, IState>{
          formData.append("rating", this.state.rating.toString())
          formData.append("restraunt", this.state.restraunt)
 
-        fetch("https://localhost:5001/api/Details/upload", {
+        fetch("https://feedmeapidevops.azurewebsites.net/api/Details/upload", {
             body: formData,
             headers: {
                 Accept: "text/plain"
