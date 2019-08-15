@@ -66,7 +66,7 @@ export default class FoodList extends React.Component<IProps,IState>{
             return (
               <div>
               <header className="App-header">
-                <h1 className="FoodList-Title">FeedMe <a href = "http://localhost:3000"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
+                <h1 className="FoodList-Title">FeedMe <a href = "https://feedmefrontend.azurewebsites.net"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
                 <div className = 'fbButton'>
                   <FacebookShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/"><FacebookIcon round={true}/></FacebookShareButton>
                 </div>
@@ -116,7 +116,7 @@ export default class FoodList extends React.Component<IProps,IState>{
           return (
             <div>
               <header className="App-header">
-                <h1 className="FoodList-Title">FeedMe <a href = "http://localhost:3000"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
+                <h1 className="FoodList-Title">FeedMe <a href = "https://feedmefrontend.azurewebsites.net"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
                 <div className = 'fbButton'>
                   <FacebookShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/"><FacebookIcon round={true}/></FacebookShareButton>
                 </div>
@@ -137,7 +137,7 @@ export default class FoodList extends React.Component<IProps,IState>{
                             <td>
                               <h3><b>{topic.title}</b></h3>
                               <br/>
-                              <p>Date and time eaten:{topic.date}</p>
+                              <p>Date and time eaten: {topic.date}</p>
                               <p>Restaurant: {topic.restraunt}</p>
                               <p>Address: {topic.address}</p>
                               <p>Description: {topic.description}</p>

@@ -18,7 +18,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="FoodList-Title">FeedMe <a href = "http://localhost:3000/FoodList/"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
+          <h1 className="FoodList-Title">FeedMe <a href = "https://feedmefrontend.azurewebsites.net/FoodList/"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
           <Details/>
         </header>
       </div>
