@@ -107,7 +107,7 @@ export default class FoodList extends React.Component<IProps,IState>{
                         </Grid>
                         ))}
                         </Grid>
-                  <div className="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="" data-numposts="5"></div>
+                  <div className="fb-comments" data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5"></div>
                   </div>
           )
           }
@@ -159,7 +159,7 @@ export default class FoodList extends React.Component<IProps,IState>{
                           ))}
                       </table>
                       </Grid>
-              <div className="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="" data-numposts="5"></div>
+              <div className="fb-comments" data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5"></div>
           </div>
       )
   }
