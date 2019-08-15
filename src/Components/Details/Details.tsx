@@ -85,7 +85,7 @@ export default class Details extends React.Component<any, IState>{
 
                 <TextField
                 id="outlined-uncontrolled"
-                label="Restraunt name"
+                label="Restaurant name"
                 margin="normal"
                 variant="outlined"
                 value = {this.state.restraunt}
@@ -137,8 +137,6 @@ export default class Details extends React.Component<any, IState>{
                 </Button>
 
                 <br/>
-
-                
             </div>
                      )
         }
