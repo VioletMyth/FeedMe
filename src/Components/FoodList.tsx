@@ -64,8 +64,9 @@ export default class FoodList extends React.Component<IProps,IState>{
           console.log(this.state.topics)
           if (isMobile) {
             return (
-              <div>
+              <div><div className = "translateBar" id="google_translate_element"></div>
               <header className="App-header">
+              
                 <h1 className="FoodList-Title">FeedMe <a href = "https://feedmefrontend.azurewebsites.net"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
                 <div className = 'fbButton'>
                   <FacebookShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/"><FacebookIcon round={true}/></FacebookShareButton>
@@ -77,36 +78,28 @@ export default class FoodList extends React.Component<IProps,IState>{
                   <TwitterShareButton url = "https://feedmefrontend.azurewebsites.net/FoodList/"><TwitterIcon round={true}/></TwitterShareButton>
 
                 </div>
-                <div className = "translateBar" id="google_translate_element"></div>
+
                 </header>
-                <Grid container justify = "center">
                 {this.state.topics.map((topic: any) =>(
-                        <Grid container justify = "center">
                         <Table>
                           <TableBody>
                             <TableRow>
-                              <Grid container justify = "center">
                               <TableCell align = "center">
                               <img src={topic.img_url} alt="Food Picture"/>
                               </TableCell>
-                              </Grid>
-                            <Grid container justify = "center">
                               <TableCell align="center">
                               
                               <h3>{topic.title}</h3>
                               <p>Date and time eaten:{topic.date}</p>
-                              <p>Restaurant: {topic.restraunt}</p>
+                              <p>Restaurant: {topic.restraunt}</p> 
                               <p>Address: {topic.address}</p>
                               <p>Description: {topic.description}</p>
                               
                               </TableCell>
-                              </Grid>
-                            </TableRow>
+                              </TableRow>
                           </TableBody>
                         </Table>
-                        </Grid>
                         ))}
-                        </Grid>
                   <div className="fb-comments" data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5"></div>
                   </div>
           )
