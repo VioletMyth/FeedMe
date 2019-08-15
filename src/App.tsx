@@ -3,7 +3,8 @@ import './App.css';
 import Details from './Components/Details/Details';
 // import DropArea from './Components/DropArea/DropArea';
 import logo from './logo.png';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -15,12 +16,9 @@ class App extends React.Component {
 
   public render() {
     return (
-
-
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">FeedMe <NavLink to = '/FoodList'>asdasdas</NavLink></h1>
-          <img src={logo} alt="Logo" style={{maxHeight: "50px", maxWidth: "50px", marginTop: "-20px"}}></img>
+          <h1 className="FoodList-Title">FeedMe <a href = "http://localhost:3000/FoodList/"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
           <Details/>
         </header>
       </div>

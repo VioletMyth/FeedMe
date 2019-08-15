@@ -3,25 +3,30 @@ img {
     max-height:450px;
     width:auto;
     height:auto;
+    float: left;
 }
 
-tr {
-    border:1px solid grey;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    
+table { 
+  border-collapse: separate; 
+  border-spacing: 0 10px; 
+  margin-top: -10px; /* correct offset on first border spacing if desired */
 }
-
-th{
-    text-align: center;
+td {
+  border: solid 1px #000;
+  border-style: solid none;
+  padding: 10px;
+  background-color: white
 }
-
-table { border-collapse: collapse;
-        margin-left:auto; 
-        margin-right:auto;
-        
+td:first-child {
+  border-left-style: solid;
+  border-top-left-radius: 10px; 
+  border-bottom-left-radius: 10px;
 }
-
+td:last-child {
+  border-right-style: solid;
+  border-bottom-right-radius: 10px; 
+  border-top-right-radius: 10px; 
+}
 p{
     text-align: center;
 }
@@ -40,14 +45,16 @@ p{
     height: 80px;
   }
   
-  .App-header {
+  .FoodList-Header
+   {
     background-color: rgb(255, 252, 0);
     height: 150px;
     padding: 20px;
     color: black;
+    width: "960px";
   }
   
-  .App-title {
+  .FoodList-Title {
     font-size: 4em;
     text-align: center;
   }
@@ -78,7 +85,24 @@ p{
   float: right;
 }
 
-.shareButtons{
-  padding-top: "70px";
-  margin-top: "70px";
+
+.fb-comments {
+  width: 100% !important; 
+  position: absolute;          
+  text-align:center !important;
+}
+
+.middleTable{
+  position: relative;
+  width: "1024px";
+  text-align: left;
+}
+
+h3{
+  text-align: center;
+  font-weight: 900;
+}
+
+.detailColor{
+  color: grey;
 }

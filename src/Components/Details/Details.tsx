@@ -56,14 +56,7 @@ export default class Details extends React.Component<any, IState>{
         return(
             
             <div className = "everything">
-            <div className="centre80" >
-                <div className="cont">
-                <div className="centreText">
-                    <div className="dropZone">
-                    <input type="file" onChange={this.handleFileUpload} className="form-control-file" id="meme-image-input" />
-                    </div>
-                </div>
-            </div>
+                <input type="file" onChange={this.handleFileUpload} className="form-control-file" id="meme-image-input" />
 
                 <TextField
                 id="outlined-uncontrolled"
@@ -120,7 +113,7 @@ export default class Details extends React.Component<any, IState>{
                 variant="outlined"
                 value={this.state.description}
                 onChange={ (e) => this.onChangeInput(e, "description")}
-                style = {{width: 600}}
+                rowsMax="4"
                 />
 
                 <br/>
@@ -147,8 +140,7 @@ export default class Details extends React.Component<any, IState>{
 
                 
             </div>
-            </div>
-            )
+                     )
         }
 
     private onChangeInput = (e:any, type: string) => {
