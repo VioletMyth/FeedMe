@@ -2,10 +2,13 @@ import * as React from 'react';
 import "./FoodList.css";
 import Rating from '@material-ui/lab/Rating';
 import { Typography, Box } from '@material-ui/core';
-import { NavLink } from 'react-router-dom';
+//import { NavLink } from 'react-router-dom';
 import {FacebookShareButton, TwitterShareButton, PinterestShareButton} from 'react-share';
 import {FacebookIcon, TwitterIcon, PinterestIcon} from 'react-share';
 // import {FacebookShareCount, PinterestShareCount} from 'react-share';
+import DeleteIcon from '@material-ui/icons/Delete';
+import Fab from '@material-ui/core/Fab';
+ import logo from '../logo.png'
 
 interface IState{
   topics: any
@@ -42,14 +45,17 @@ export default class FoodList extends React.Component<IProps,IState>{
           return (
             <div>
             <header className="App-header">
-                <h1 className="App-title">FeedMe <NavLink to = '/'>Details</NavLink></h1>
-                <div>
-                <FacebookShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/"><FacebookIcon/></FacebookShareButton>
+                <div className = 'fbButton'>
+                <FacebookShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/"><FacebookIcon round={true}/></FacebookShareButton>
                 </div>
-                <div>
-                <PinterestShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/" media = "https://feedmeimagestorage.blob.core.windows.net/images/a8620bc7-a9fd-4822-be6a-d9dd891f8af0.jpg"><PinterestIcon/></PinterestShareButton>
+                <div className = 'pinButton'>
+                <PinterestShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/" media = "https://feedmeimagestorage.blob.core.windows.net/images/a8620bc7-a9fd-4822-be6a-d9dd891f8af0.jpg"><PinterestIcon round={true}/></PinterestShareButton>
                 </div>
-                <TwitterShareButton url = "https://feedmefrontend.azurewebsites.net/FoodList/"><TwitterIcon/></TwitterShareButton>
+                <div className = 'twitButton'>
+                <TwitterShareButton url = "https://feedmefrontend.azurewebsites.net/FoodList/"><TwitterIcon round={true}/></TwitterShareButton>
+                </div>
+                <h1 className="App-title">FeedMe <a href = "http://localhost:3000/"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
+                
             </header>
             <ul>
               <table>
@@ -70,6 +76,9 @@ export default class FoodList extends React.Component<IProps,IState>{
                           value={topic.rating}
                       />
                       </Box>
+                      <Fab disabled aria-label="delete" className="delte button">
+                        <DeleteIcon />
+                      </Fab>
                       </div>                      
                     </td>
                   </tr>

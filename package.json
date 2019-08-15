@@ -5,6 +5,7 @@
   "dependencies": {
     "@aspnet/signalr": "^1.1.4",
     "@material-ui/core": "^4.3.2",
+    "@material-ui/icons": "^4.2.1",
     "@material-ui/lab": "^4.0.0-alpha.23",
     "@types/react-dropzone": "^4.2.2",
     "@types/react-facebook-login": "^4.1.0",
@@ -13,6 +14,7 @@
     "bootstrap": "^4.3.1",
     "google-translate": "^2.3.0",
     "history": "^4.9.0",
+    "material-ui-icons": "^1.0.0-beta.36",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.11",

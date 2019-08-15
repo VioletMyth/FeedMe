@@ -56,7 +56,6 @@ export default class Details extends React.Component<any, IState>{
         return(
             
             <div className = "everything">
-
             <div className="centre80" >
                 <div className="cont">
                 <div className="centreText">
