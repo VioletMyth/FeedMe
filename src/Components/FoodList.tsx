@@ -1,7 +1,7 @@
 import * as React from 'react';
 import "./FoodList.css";
 import Rating from '@material-ui/lab/Rating';
-import { Typography, Box, Grid } from '@material-ui/core';
+import { Typography, Box } from '@material-ui/core';
 //import { NavLink } from 'react-router-dom';
 import {FacebookShareButton, TwitterShareButton, PinterestShareButton} from 'react-share';
 import {FacebookIcon, TwitterIcon, PinterestIcon} from 'react-share';
@@ -16,7 +16,8 @@ import TableCell from '@material-ui/core/TableCell';
 //import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 //import Paper from '@material-ui/core/Paper';
-
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 interface IState{
   topics: any,
@@ -107,53 +108,85 @@ export default class FoodList extends React.Component<IProps,IState>{
           
           else{
           
-          return (
-            <div>
-              <header className="App-header">
-                <h1 className="FoodList-Title">FeedMe <a href = "https://feedmefrontend.azurewebsites.net"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
-                <div className = 'fbButton'>
-                  <FacebookShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/"><FacebookIcon round={true}/></FacebookShareButton>
-                </div>
-                <div className = "pinButton">
-                  <PinterestShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/" media = "https://feedmeimagestorage.blob.core.windows.net/images/a8620bc7-a9fd-4822-be6a-d9dd891f8af0.jpg"><PinterestIcon round={true}/></PinterestShareButton>
-                </div>
-                <div className = "twitButton">
-                  <TwitterShareButton url = "https://feedmefrontend.azurewebsites.net/FoodList/"><TwitterIcon round={true}/></TwitterShareButton>
+          const responsive = (
+            this.state.topics.map((topic: any) => { 
+              <Row>
+                <Col md = {3}>
+                  <img src = {topic.img_url} alt = "Food picture" />
+                </Col>
+                <Col md = {9}>
+                  <div>
+                    <h3><b>{topic.title}</b></h3>
+                    <br/>
+                    <p>Date and time eaten: {topic.date}</p>
+                    <p>Restaurant: {topic.restraunt}</p>
+                    <p>Address: {topic.address}</p>
+                    <p>Description: {topic.description}</p>
+                    <div className = "rating_component">
+                      <Box component="fieldset" mb={3} borderColor="transparent">
+                      <Typography component="legend">Re-eatability</Typography>
+                      <Rating
+                          name="simple-controlled"
+                          value={topic.rating}
+                      />
+                      </Box>
+                      <Fab disabled aria-label="delete" className="delte button">
+                        <DeleteIcon />
+                      </Fab>
+                      </div>  
+                  </div>
+                </Col>
+              </Row>
+            })
+          )
+          return ( responsive
+          //   <div>
+          //     <header className="App-header">
+          //       <h1 className="FoodList-Title">FeedMe <a href = "https://feedmefrontend.azurewebsites.net"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
+          //       <div className = 'fbButton'>
+          //         <FacebookShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/"><FacebookIcon round={true}/></FacebookShareButton>
+          //       </div>
+          //       <div className = "pinButton">
+          //         <PinterestShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/" media = "https://feedmeimagestorage.blob.core.windows.net/images/a8620bc7-a9fd-4822-be6a-d9dd891f8af0.jpg"><PinterestIcon round={true}/></PinterestShareButton>
+          //       </div>
+          //       <div className = "twitButton">
+          //         <TwitterShareButton url = "https://feedmefrontend.azurewebsites.net/FoodList/"><TwitterIcon round={true}/></TwitterShareButton>
 
-                </div>
-                <div className = "translateBar" id="google_translate_element"></div>
-            </header>
-            <Grid container justify = "center">
-                    <table>
-                    {this.state.topics.map((topic: any) =>(
-                          <tr>
-                            <td><img src={topic.img_url} alt="Food Picture"/></td>
-                            <td>
-                              <h3><b>{topic.title}</b></h3>
-                              <br/>
-                              <p>Date and time eaten: {topic.date}</p>
-                              <p>Restaurant: {topic.restraunt}</p>
-                              <p>Address: {topic.address}</p>
-                              <p>Description: {topic.description}</p>
-                              <div className = "rating_component">
-                              <Box component="fieldset" mb={3} borderColor="transparent">
-                              <Typography component="legend">Re-eatability</Typography>
-                              <Rating
-                                  name="simple-controlled"
-                                  value={topic.rating}
-                              />
-                              </Box>
-                              <Fab disabled aria-label="delete" className="delte button">
-                                <DeleteIcon />
-                              </Fab>
-                              </div>                      
-                            </td>
-                          </tr>
-                          ))}
-                      </table>
-                      </Grid>
-              <div className="fb-comments" data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5"></div>
-          </div>
+          //       </div>
+          //       <div className = "translateBar" id="google_translate_element"></div>
+          //   </header>
+            
+          //   <Grid container justify = "center">
+          //           <table>
+          //           {this.state.topics.map((topic: any) =>(
+          //                 <tr>
+          //                   <td><img src={topic.img_url} alt="Food Picture"/></td>
+          //                   <td>
+          //                     <h3><b>{topic.title}</b></h3>
+          //                     <br/>
+          //                     <p>Date and time eaten: {topic.date}</p>
+          //                     <p>Restaurant: {topic.restraunt}</p>
+          //                     <p>Address: {topic.address}</p>
+          //                     <p>Description: {topic.description}</p>
+          //                     <div className = "rating_component">
+          //                     <Box component="fieldset" mb={3} borderColor="transparent">
+          //                     <Typography component="legend">Re-eatability</Typography>
+          //                     <Rating
+          //                         name="simple-controlled"
+          //                         value={topic.rating}
+          //                     />
+          //                     </Box>
+          //                     <Fab disabled aria-label="delete" className="delte button">
+          //                       <DeleteIcon />
+          //                     </Fab>
+          //                     </div>                      
+          //                   </td>
+          //                 </tr>
+          //                 ))}
+          //             </table>
+          //             </Grid>
+          //     <div className="fb-comments" data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5"></div>
+          // </div>
       )
   }
 }
