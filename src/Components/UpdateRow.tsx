@@ -138,7 +138,7 @@ class UpdateRow extends React.Component<IProps, IState>
                 />
 
             <Box component="fieldset" mb={3} borderColor="transparent">
-                <Typography component="legend">Re-eatability</Typography>
+                <Typography component="legend" style = {{textAlign: "center"}}>Re-eatability</Typography>
                 <Rating 
                     style = {{justifyContent: "center"}}
                     name="simple-controlled"

@@ -1,12 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import Details from './Components/Details/Details';
-// import DropArea from './Components/DropArea/DropArea';
-// import logo from './logo.png';
-//import FoodList from './Components/FoodList';
-// import { NavLink } from 'react-router-dom';
-//import {BrowserRouter, Route, NavLink} from "react-router-dom";
-//import ResponsiveFoodList from './Components/ResponsiveFoodList';
+import Details from './Components/Details/Details'; 
 import * as Webcam from "react-webcam";
 import Col from 'react-bootstrap/Col';
 

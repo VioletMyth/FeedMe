@@ -6,6 +6,7 @@ import { Typography, Button, Box } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
 // import DeleteIcon from '@material-ui/icons/Delete';
 import UpdateRow from './UpdateRow';
+import "./FoodList.css";
 
 interface IState {
     open: boolean;
@@ -50,23 +51,23 @@ class FoodItem extends React.Component<IProps, IState>
                 <p>Restaurant: {this.props.topic.restraunt}</p>
                 <p>Address: {this.props.topic.address}</p>
                 <p>Description: {this.props.topic.description}</p>
-                <div className = "rating_component">
+                <div className = "rating_component" style={{justifyContent: 'center'}}>
                     <Box component="fieldset" mb={3} borderColor="transparent">
-                    <Typography component="legend">Re-eatability</Typography>
+                    <Typography component="legend" align='center'>Re-eatability</Typography>
                     <Rating 
                         style = {{justifyContent: "center"}}
                         name="simple-controlled"
                         value={this.props.topic.rating}
                     />
                     </Box>
+                    </div>
+                    <div style = {{textAlign: 'center'}}>
                     <Button onClick = {this.toggleOpen}> Edit </Button>
                     <Button onClick = {this.incrementLikes}> Like {this.state.likes}</Button>
-                    
-                    {/* <Fab disabled aria-label="delete" className="delte button"> */}
-                    {/* <DeleteIcon/> */}
-                    {/* </Fab> */}
-                    <UpdateRow refresh = {this.props.refresh} currentInfo = {this.props.topic} open = {this.state.open} toggleOpen = {this.toggleOpen}/>
                     </div>
+
+                    <UpdateRow refresh = {this.props.refresh} currentInfo = {this.props.topic} open = {this.state.open} toggleOpen = {this.toggleOpen}/>
+
                     
                 </div>
             </Col>

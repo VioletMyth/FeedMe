@@ -49,7 +49,6 @@ export default class ResponsiveFoodList extends React.Component<{},IState>{
             <div>
                 <header className="FoodList-header">
                 <h1 className="FoodList-Title" style={{lineHeight: "90px"}}>FeedMe<a href = "https://feedmefrontend.azurewebsites.net"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
-                <div className="fb-comments"  id="fb"data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5"></div>
                 </header>
                 <div style = {{position: "fixed", left: 0}}>
                     <div className = 'fbButton'>
@@ -66,9 +65,9 @@ export default class ResponsiveFoodList extends React.Component<{},IState>{
                 </div>
             <div style = {{width: "70%", margin: "0 auto"}}>
                 {responsive}
-                <div className="fb-comments"  id="fb"data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5"></div>
                 
             </div>
+            <div className="fb-comments"  id="fb"data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5" style = {{width: "70%", margin: "0 auto"}}></div>
             <footer>
                   <div className = "translateBar" id="google_translate_element"></div>
                     <p> Copyright &copy; 2019 FeedMe Inc. All rights reserved</p>
