@@ -13,6 +13,7 @@
     "@types/react-share": "^2.1.1",
     "@types/react-webcam": "^1.1.0",
     "bootstrap": "^4.3.1",
+    "fb": "^2.0.0",
     "google-translate": "^2.3.0",
     "history": "^4.9.0",
     "material-ui-icons": "^1.0.0-beta.36",

@@ -4,7 +4,6 @@ import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Rating from '@material-ui/lab/Rating';
-// import ReactDropzone from 'react-dropzone'
 import * as React from 'react';
 import './Details.css';
 import logo from './logo.png';
@@ -47,7 +46,6 @@ export default class Details extends React.Component<any, IState>{
         }
     };
 
-    // const [value, setValue] = React.useState(2)
 
     public resultstate = (resultString:string,filelen:any) => {
         this.setState({result:resultString,filelength:filelen})
@@ -57,12 +55,12 @@ export default class Details extends React.Component<any, IState>{
         return(
             <div className = "everything">
                 <header className="FoodList-header">
-                <h1 className="FoodList-Title" style={{lineHeight: "90px"}}>FeedMe<a href = "https://feedmefrontend.azurewebsites.net"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
+                <h1 className="FoodList-Title" style={{lineHeight: "90px"}}>FeedMe<a href = "https://feedmefrontend.azurewebsites.net/FoodList"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
                 
                 
                 </header>
                 <div style = {{textAlign: "center", padding: "20px"}}>
-                <input type="file" onChange={this.handleFileUpload} className="form-control-file" id="meme-image-input"/>
+                <input type="file" onChange={this.handleFileUpload} className="form-control-file" id="image-input"/>
 
                 <TextField
                 id="outlined-uncontrolled"
@@ -129,6 +127,7 @@ export default class Details extends React.Component<any, IState>{
                         style = {{justifyContent: "center"}}
                         name="simple-controlled"
                         value={this.state.rating}
+                        onChange = {(e) => this.onChangeInput(e, "rating")}
                     />
                     </Box>                    
                     </div> 
@@ -194,7 +193,7 @@ export default class Details extends React.Component<any, IState>{
                 location.reload();
             } else {
                 console.log(response);
-                alert("Error")
+                alert("You are missing one or more fields")
             }
         })
     }

@@ -1,14 +1,8 @@
 import * as React from 'react';
 import "./FoodList.css";
-// import Rating from '@material-ui/lab/Rating';
-// import { Typography, Box, Fab, Button } from '@material-ui/core';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
 import {FacebookShareButton, TwitterShareButton, PinterestShareButton} from 'react-share';
 import {FacebookIcon, TwitterIcon, PinterestIcon} from 'react-share';
-// import DeleteIcon from '@material-ui/icons/Delete';
 import logo from "../logo.png";
-// import UpdateRow from './UpdateRow';
 import FoodItem from './FoodItem';
 
 interface IState{
@@ -73,10 +67,12 @@ export default class ResponsiveFoodList extends React.Component<{},IState>{
             <div style = {{width: "70%", margin: "0 auto"}}>
                 {responsive}
                 <div className="fb-comments"  id="fb"data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5"></div>
-                <footer>
+                
+            </div>
+            <footer>
+                  <div className = "translateBar" id="google_translate_element"></div>
                     <p> Copyright &copy; 2019 FeedMe Inc. All rights reserved</p>
                 </footer>
-            </div>
             </div>
         );
   }

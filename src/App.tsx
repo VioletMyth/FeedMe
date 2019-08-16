@@ -1,12 +1,12 @@
 import * as React from 'react';
 import './App.css';
-// import Details from './Components/Details/Details';
+import Details from './Components/Details/Details';
 // import DropArea from './Components/DropArea/DropArea';
 // import logo from './logo.png';
 //import FoodList from './Components/FoodList';
 // import { NavLink } from 'react-router-dom';
 //import {BrowserRouter, Route, NavLink} from "react-router-dom";
-import ResponsiveFoodList from './Components/ResponsiveFoodList';
+//import ResponsiveFoodList from './Components/ResponsiveFoodList';
 import * as Webcam from "react-webcam";
 import Col from 'react-bootstrap/Col';
 
@@ -47,7 +47,7 @@ class App extends React.Component<{}, IState> {
                             style = {{textAlign: "center"}}
                         />
                         <div className="row nav-row" style = {{justifyContent: "center", width: "auto"}}>
-                            <div className="btn btn-primary bottom-button" onClick={this.authenticate} >Login</div>
+                            <div className="btn btn-primary bottom-button" onClick={this.authenticate} style = {{backgroundColor:"yellow"}}>Login to FeedMe</div>
                         </div>
                         </Col>
                     </div>
@@ -57,7 +57,7 @@ class App extends React.Component<{}, IState> {
                 <header className="App-header">
             
                 </header>
-                <ResponsiveFoodList />
+                <Details />
                 
               </div>
               :""}

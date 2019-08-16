@@ -9,6 +9,7 @@ import UpdateRow from './UpdateRow';
 
 interface IState {
     open: boolean;
+    likes: number;
 }
 interface IProps {
     topic: any,
@@ -19,7 +20,8 @@ class FoodItem extends React.Component<IProps, IState>
     constructor(props: IProps) {
         super(props);
         this.state = {
-            open: false
+            open: false,
+            likes: 0,
         }
     }
 
@@ -27,6 +29,10 @@ class FoodItem extends React.Component<IProps, IState>
         this.setState((prevState: any) => { return {
             open: !prevState.open
         }});
+    }
+
+    public incrementLikes = () => {
+        this.setState({likes: this.state.likes + 1})
     }
 
 
@@ -54,10 +60,11 @@ class FoodItem extends React.Component<IProps, IState>
                     />
                     </Box>
                     <Button onClick = {this.toggleOpen}> Edit </Button>
+                    <Button onClick = {this.incrementLikes}> Like {this.state.likes}</Button>
+                    
                     {/* <Fab disabled aria-label="delete" className="delte button"> */}
                     {/* <DeleteIcon/> */}
                     {/* </Fab> */}
-                    
                     <UpdateRow refresh = {this.props.refresh} currentInfo = {this.props.topic} open = {this.state.open} toggleOpen = {this.toggleOpen}/>
                     </div>
                     

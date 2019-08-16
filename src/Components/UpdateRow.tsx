@@ -78,8 +78,6 @@ class UpdateRow extends React.Component<IProps, IState>
     })
     }
 
-
-
     render() {
         return(
             <Dialog open={this.props.open} onClose={this.props.toggleOpen} aria-labelledby="form-dialog-title">
@@ -139,16 +137,14 @@ class UpdateRow extends React.Component<IProps, IState>
                 rowsMax="4"
                 />
 
-                <div className = "rating_component">
-                <Box component="fieldset" mb={3} borderColor="transparent">
+            <Box component="fieldset" mb={3} borderColor="transparent">
                 <Typography component="legend">Re-eatability</Typography>
-                <Rating
+                <Rating 
+                    style = {{justifyContent: "center"}}
                     name="simple-controlled"
                     value={this.state.rating}
-                    onChange={ (e: any, newVal: number) => console.log("hi") }
                 />
                 </Box>
-                </div>
             </DialogContent>
             <DialogActions>
               <Button onClick={this.props.toggleOpen} color="primary">
