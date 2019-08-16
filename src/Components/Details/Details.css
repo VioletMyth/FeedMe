@@ -1,12 +1,141 @@
 .rating_component{
-    margin-right: 1000%;
 }
 
-.everything{
-    margin-top: 100px;
-}
 
 #meme-image-input{
-    text-align: "center";
-    margin: auto;
+    width: auto;
+    margin: 0 auto;
 }
+
+.rowImages {
+    width: 100%
+  }
+  
+  table { 
+    border-collapse: separate; 
+    border-spacing: 0 10px; 
+    margin-top: -10px; /* correct offset on first border spacing if desired */
+  }
+  td {
+    border: solid 1px #000;
+    border-style: solid none;
+    padding: 10px;
+    background-color: white
+  }
+  td:first-child {
+    border-left-style: solid;
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
+  }
+  td:last-child {
+    border-right-style: solid;
+    border-bottom-right-radius: 10px; 
+    border-top-right-radius: 10px; 
+  }
+  p{
+      text-align: center;
+  }
+  
+  
+  .App {
+      text-align: center;
+    }
+    
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+      height: 80px;
+    }
+    
+    .Details-header
+     {
+      background-color: rgb(255, 252, 0);
+      height: 150px;
+      padding: 20px;
+      color: black;
+      width: auto;
+  
+    }
+    
+    .FoodList-Title {
+      font-size: 7vw;
+      text-align: center;
+      vertical-align: center;
+    }
+    
+    .App-intro {
+      font-size: large;
+    }
+    
+    @keyframes App-logo-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+  .logoNav{
+      max-height:5vw;
+      width: auto;
+      line-height: 90px;
+      
+  }
+  
+  .fbButton{
+  }
+  
+  .pinButton{
+  }
+  .twitButton{
+  }
+  
+  
+  .fb-comments {
+    width: 100% !important; 
+    position: absolute;          
+    text-align:center !important;
+  }
+  
+  .middleTable{
+    position: relative;
+    width: "1024px";
+    text-align: left;
+  }
+  
+  h3{
+    text-align: center;
+    font-weight: 900;
+    font-size: 4vw;
+  }
+  
+  .detailColor{
+    color: grey;
+  }
+  
+  .rowEntry{
+    border: solid;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+  }
+  
+  .translateBar{
+    width: auto;
+    justify-content: "center";
+  }
+  
+  @media only screen and (max-width: 640px){
+    .FoodList-Title {
+      font-size: 10vw;
+      text-align: center;
+      vertical-align: center;
+    }
+  }
+
+  footer
+  {
+   background-color: rgb(255, 252, 0);
+   height: 100px;
+   padding: 20px;
+   color: black;
+   width: auto;
+   text-align: center;
+
+ }

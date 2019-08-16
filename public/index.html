@@ -18,18 +18,22 @@
     <title>FeedMe</title>
   </head>
   <body>
-      <div id="fb-root"></div>
+
+      <div id="fb-root">
           <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=386533352056000&autoLogAppEvents=1"></script>
     </div>
+    <div className="fb-comments"  id="fb"data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5"></div>
+
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root">
-        <script type="text/javascript">
+      <script type="text/javascript">
         function googleTranslateElementInit() {
           new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
         }
         </script>
+        
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         
   </body>

@@ -11,7 +11,8 @@ interface IState {
     open: boolean;
 }
 interface IProps {
-    topic: any
+    topic: any,
+    refresh: any
 }
 class FoodItem extends React.Component<IProps, IState>
 {
@@ -57,8 +58,9 @@ class FoodItem extends React.Component<IProps, IState>
                     {/* <DeleteIcon/> */}
                     {/* </Fab> */}
                     
-                    <UpdateRow currentInfo = {this.props.topic} open = {this.state.open} toggleOpen = {this.toggleOpen}/>
-                    </div>  
+                    <UpdateRow refresh = {this.props.refresh} currentInfo = {this.props.topic} open = {this.state.open} toggleOpen = {this.toggleOpen}/>
+                    </div>
+                    
                 </div>
             </Col>
             </Row>

@@ -28,6 +28,9 @@ export default class ResponsiveFoodList extends React.Component<{},IState>{
 
     
     componentDidMount() {
+      this.getFoodList();
+    }
+    public getFoodList = () => {
       fetch('https://feedmeapidevops.azurewebsites.net/api/Details').then((res)=>res.json().then((data)=>{
         const output:any[] = []
         data.forEach((food: any)=>{
@@ -39,23 +42,24 @@ export default class ResponsiveFoodList extends React.Component<{},IState>{
       console.log(this.state.topics) //returns [];
     }
 
+
+
     public render() {
         console.log(this.state.topics);
         const responsive = (
         this.state.topics.map((topic: any) =>  (
-            <FoodItem topic = {topic}/>
+            <FoodItem topic = {topic} refresh = {this.getFoodList}/>
         ))
         )
         return (
             <div>
                 <header className="FoodList-header">
                 <h1 className="FoodList-Title" style={{lineHeight: "90px"}}>FeedMe<a href = "https://feedmefrontend.azurewebsites.net"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
-                
-                
+                <div className="fb-comments"  id="fb"data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5"></div>
                 </header>
                 <div style = {{position: "fixed", left: 0}}>
                     <div className = 'fbButton'>
-                    <FacebookShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/"><FacebookIcon round={true}/></FacebookShareButton>
+                    <FacebookShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/" ><FacebookIcon round={true}/></FacebookShareButton>
                     </div>
                     <div className = "pinButton">
                     <PinterestShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/" media = "https://feedmeimagestorage.blob.core.windows.net/images/a8620bc7-a9fd-4822-be6a-d9dd891f8af0.jpg"><PinterestIcon round={true}/></PinterestShareButton>
@@ -63,10 +67,15 @@ export default class ResponsiveFoodList extends React.Component<{},IState>{
                     <div className = "twitButton">
                     <TwitterShareButton url = "https://feedmefrontend.azurewebsites.net/FoodList/"><TwitterIcon round={true}/></TwitterShareButton>
                     </div>
-                        
+                    
+                    
                 </div>
             <div style = {{width: "70%", margin: "0 auto"}}>
                 {responsive}
+                <div className="fb-comments"  id="fb"data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5"></div>
+                <footer>
+                    <p> Copyright &copy; 2019 FeedMe Inc. All rights reserved</p>
+                </footer>
             </div>
             </div>
         );

@@ -7,6 +7,7 @@ import Rating from '@material-ui/lab/Rating';
 // import ReactDropzone from 'react-dropzone'
 import * as React from 'react';
 import './Details.css';
+import logo from './logo.png';
 
 
 interface IState{
@@ -54,9 +55,14 @@ export default class Details extends React.Component<any, IState>{
 
     public render(){
         return(
-            
             <div className = "everything">
-                <input type="file" onChange={this.handleFileUpload} className="form-control-file" id="meme-image-input" />
+                <header className="FoodList-header">
+                <h1 className="FoodList-Title" style={{lineHeight: "90px"}}>FeedMe<a href = "https://feedmefrontend.azurewebsites.net"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
+                
+                
+                </header>
+                <div style = {{textAlign: "center", padding: "20px"}}>
+                <input type="file" onChange={this.handleFileUpload} className="form-control-file" id="meme-image-input"/>
 
                 <TextField
                 id="outlined-uncontrolled"
@@ -81,7 +87,6 @@ export default class Details extends React.Component<any, IState>{
                     />
                     </form>
 
-                <br/>
 
                 <TextField
                 id="outlined-uncontrolled"
@@ -117,27 +122,28 @@ export default class Details extends React.Component<any, IState>{
                 />
 
                 <br/>
-
-                
                 <div className = "rating_component">
-                <Box component="fieldset" mb={3} borderColor="transparent">
-                <Typography component="legend">Re-eatability</Typography>
-                <Rating
-                    name="simple-controlled"
-                    value={this.state.rating}
-                    onChange={ (e) => this.onChangeInput(e, "rating")}
-                />
-                </Box>
-                </div>
-
-                <br/>
+                    <Box component="fieldset" mb={3} borderColor="transparent">
+                    <Typography component="legend">Re-eatability</Typography>
+                    <Rating 
+                        style = {{justifyContent: "center"}}
+                        name="simple-controlled"
+                        value={this.state.rating}
+                    />
+                    </Box>                    
+                    </div> 
 
                 <Button onClick={this.onSubmit} className={"submit-button"}>
                     Submit
                 </Button>
-
-                <br/>
+                </div>
+                
+                <footer> 
+                    <div className = "translateBar" id="google_translate_element"></div>
+                    <p> Copyright &copy; 2019 FeedMe Inc. All rights reserved</p>
+                </footer>
             </div>
+            
                      )
         }
 

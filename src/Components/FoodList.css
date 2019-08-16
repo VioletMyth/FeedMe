@@ -118,3 +118,7 @@ h3{
     vertical-align: center;
   }
 }
+.translateBar{
+  width: auto;
+  justify-content: "center";
+}

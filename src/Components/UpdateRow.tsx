@@ -5,7 +5,8 @@ import Rating from '@material-ui/lab/Rating';
 interface IProps {
     open: boolean,
     toggleOpen: any;
-    currentInfo: any
+    currentInfo: any,
+    refresh: any,
 }
 
 interface IState {
@@ -53,7 +54,7 @@ class UpdateRow extends React.Component<IProps, IState>
            // console.log
            if (response.ok){
                alert("Details uploaded");
-               location.reload();
+               this.props.refresh();
            } else {
                console.log(response);
                alert("Error")
@@ -69,7 +70,7 @@ class UpdateRow extends React.Component<IProps, IState>
         // console.log
         if (response.ok){
             alert("delete uploaded");
-            location.reload();
+            this.props.refresh();
         } else {
             console.log(response);
             alert("Error")
@@ -159,6 +160,7 @@ class UpdateRow extends React.Component<IProps, IState>
               <Button onClick = {this.deleteFoodItem}> delete </Button>
             </DialogActions>
           </Dialog>
+          
         )
     }
 }
