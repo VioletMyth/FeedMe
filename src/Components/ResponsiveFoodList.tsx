@@ -48,7 +48,7 @@ export default class ResponsiveFoodList extends React.Component<{},IState>{
         return (
             <div>
                 <header className="FoodList-header">
-                <h1 className="FoodList-Title" style={{lineHeight: "90px"}}>FeedMe<a href = "https://feedmefrontend.azurewebsites.net"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
+                <h1 className="FoodList-Title" style={{lineHeight: "90px"}}>FeedMe<a href = "https://feedmefrontend.azurewebsites.net/Form"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
                 </header>
                 <div style = {{position: "fixed", left: 0}}>
                     <div className = 'fbButton'>

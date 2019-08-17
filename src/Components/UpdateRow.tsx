@@ -153,7 +153,7 @@ class UpdateRow extends React.Component<IProps, IState>
               <Button onClick={this.updateFoodItem} color="primary">
                 Update
               </Button>
-              <Button onClick = {this.deleteFoodItem}> delete </Button>
+              <Button onClick = {this.deleteFoodItem}> Delete </Button>
             </DialogActions>
           </Dialog>
           

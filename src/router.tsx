@@ -10,8 +10,8 @@ export const AppRouter: React.StatelessComponent<{}> = () => {
         <BrowserRouter>
             <div>
                 <main>
-                    <Route exact={true} path="/" component={App} />
-                    <Route path="/FoodList" component={ResponsiveFoodList} />
+                    <Route exact={true} path="/" component={ResponsiveFoodList} />
+                    <Route path="/Form" component={App} />
                 </main>
             </div>
         </BrowserRouter>

@@ -18,7 +18,7 @@ class App extends React.Component<{}, IState> {
     this.state = {
       refCamera: React.createRef(),
       predictionResult: null,
-      authenticated: false
+      authenticated: false,
     }
     this.authenticate = this.authenticate.bind(this)
   }
@@ -26,6 +26,8 @@ class App extends React.Component<{}, IState> {
   // public resultstate = (resultString:string,filelen:any) => {
     // this.setState({result:resultString,filelength:filelen})
   // }
+
+
 
   public render() {
     const { authenticated } = this.state
@@ -41,7 +43,7 @@ class App extends React.Component<{}, IState> {
                             style = {{textAlign: "center"}}
                         />
                         <div className="row nav-row" style = {{justifyContent: "center", width: "auto"}}>
-                            <div className="btn btn-primary bottom-button" onClick={this.authenticate} style = {{backgroundColor:"yellow"}}>Login to FeedMe</div>
+                            <div className="btn btn-primary bottom-button" onClick={this.authenticate} style = {{backgroundColor:"yellow", color: "black", borderColor: "black"}}>Login to FeedMe</div>
                         </div>
                         </Col>
                     </div>

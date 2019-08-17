@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {TextField} from '@material-ui/core'
+import {TextField} from '@material-ui/core';
 
 interface IState{
     isAdmin: any,
@@ -7,7 +7,7 @@ interface IState{
     password: any,
 }
 
-export default class loginForm extends React.Component<IState>{
+class loginForm extends React.Component<IState>{
     constructor(props : any){
         super(props);
         this.state = {
@@ -16,7 +16,7 @@ export default class loginForm extends React.Component<IState>{
             password: ""
         }
 
-    };
+    }
 
     public Authenticate = (userName: string, password: string) =>{
         if(userName === "admin" && password === "admin"){
@@ -55,4 +55,7 @@ export default class loginForm extends React.Component<IState>{
                 return(this.setState({title: e.target.value}));
             case "password":
                 return(this.setState({description: e.target.value}));
+        }
+    }
 }
+export default loginForm;
