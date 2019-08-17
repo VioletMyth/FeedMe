@@ -55,7 +55,7 @@ export default class Details extends React.Component<any, IState>{
         return(
             <div className = "everything">
                 <header className="FoodList-header">
-                <h1 className="FoodList-Title" style={{lineHeight: "90px"}}>FeedMe<a href = "https://feedmefrontend.azurewebsites.net/FoodList"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
+                <h1 className="FoodList-Title" style={{lineHeight: "90px"}}>FeedMe<a href = "https://feedmefrontend.azurewebsites.net/"><img className = "logoNav" src = {logo} alt = "FeedMe Logo" height="80px"/></a></h1>
                 
                 
                 </header>

@@ -90,7 +90,7 @@ class App extends React.Component<{}, IState> {
                           console.log(json.predictions[0])
         
                           this.setState({ predictionResult: json.predictions[0] })
-                          if (this.state.predictionResult.probability > 0.7) {
+                          if (this.state.predictionResult.probability > 0.9) {
                               this.setState({ authenticated: true })
                           } else {
                               this.setState({ authenticated: false })
