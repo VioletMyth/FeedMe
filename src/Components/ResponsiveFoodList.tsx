@@ -52,22 +52,21 @@ export default class ResponsiveFoodList extends React.Component<{},IState>{
                 </header>
                 <div style = {{position: "fixed", left: 0}}>
                     <div className = 'fbButton'>
-                    <FacebookShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/" ><FacebookIcon round={true}/></FacebookShareButton>
+                    <FacebookShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/" ><FacebookIcon round={true} size={32}/></FacebookShareButton>
                     </div>
                     <div className = "pinButton">
-                    <PinterestShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/" media = "https://feedmeimagestorage.blob.core.windows.net/images/a8620bc7-a9fd-4822-be6a-d9dd891f8af0.jpg"><PinterestIcon round={true}/></PinterestShareButton>
+                    <PinterestShareButton url ="https://feedmefrontend.azurewebsites.net/FoodList/" media = "https://feedmeimagestorage.blob.core.windows.net/images/a8620bc7-a9fd-4822-be6a-d9dd891f8af0.jpg"><PinterestIcon round={true} size={32}/></PinterestShareButton>
                     </div>
                     <div className = "twitButton">
-                    <TwitterShareButton url = "https://feedmefrontend.azurewebsites.net/FoodList/"><TwitterIcon round={true}/></TwitterShareButton>
+                    <TwitterShareButton url = "https://feedmefrontend.azurewebsites.net/FoodList/"><TwitterIcon round={true} size={32}/></TwitterShareButton>
                     </div>
                     
                     
                 </div>
             <div style = {{width: "70%", margin: "0 auto"}}>
                 {responsive}
-                
             </div>
-            <div className="fb-comments"  id="fb"data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="" data-numposts="5" style = {{width: "70%", margin: "0 auto"}}></div>
+            <div className="fb-comments"  id="fb"data-href="https://feedmefrontend.azurewebsites.net/FoodList/" data-width="100%" data-numposts="5"></div>
             <footer>
                   <div className = "translateBar" id="google_translate_element"></div>
                     <p> Copyright &copy; 2019 FeedMe Inc. All rights reserved</p>
