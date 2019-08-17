@@ -53,7 +53,7 @@ class UpdateRow extends React.Component<IProps, IState>
        .then((response: any) => {
            // console.log
            if (response.ok){
-               alert("Details uploaded");
+               alert("FoodItem details have been changed");
                this.props.refresh();
            } else {
                console.log(response);
@@ -69,7 +69,7 @@ class UpdateRow extends React.Component<IProps, IState>
     .then((response: any) => {
         // console.log
         if (response.ok){
-            alert("delete uploaded");
+            alert("FoodItem has been deleted");
             this.props.refresh();
         } else {
             console.log(response);
